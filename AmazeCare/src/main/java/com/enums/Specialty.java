@@ -1,0 +1,18 @@
+package com.enums;
+
+public enum Specialty {
+    GENERAL_PHYSICIAN,
+    CARDIOLOGIST,
+    NEUROLOGIST,
+    ORTHOPEDIC,
+    DERMATOLOGIST,
+    PEDIATRICIAN,
+    GYNECOLOGIST,
+    ENT,
+    OPHTHALMOLOGIST,
+    PSYCHIATRIST,
+    DENTIST,
+    SURGEON
+
+
+}
