@@ -4,6 +4,7 @@ import UserList from './components/UserList'
 import PageNotFound from './components/PageNotFound'
 import AddUser from './components/AddUser'
 import Navbar from "./components/Navbar"
+import Task from './components/Task'
 function App() {
 
   return (
@@ -14,9 +15,13 @@ function App() {
       <Routes>
         <Route path="/" element={<UserList />}> </Route>
         <Route path="/add-user" element={<AddUser />}>   </Route>
+        
+        <Route path="/task" element={<Task/>}>   </Route>
+        
         <Route path="*" element={<PageNotFound />}>   </Route>
 
       </Routes>
+    
     </div>
 
   )

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg bg-dark">
       <div className="d-flex container">
 
         <div>
@@ -10,8 +10,12 @@ function Navbar() {
             User List
           </NavLink>
 
-          <NavLink className="btn btn-success" to="/add-user">
+          <NavLink className="btn btn-success me-2" to="/add-user">
             Add User
+          </NavLink>
+
+          <NavLink className="btn btn-warning" to="/task">
+            List
           </NavLink>
         </div>
       </div>
