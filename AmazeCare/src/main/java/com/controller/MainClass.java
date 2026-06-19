@@ -498,7 +498,7 @@ public class MainClass {
                         AppointmentService appointmentService=new AppointmentService(session);
                         System.out.println("-----Manage Appointments-------");// these will be specific to that patient
                         System.out.println("1. Make an appointment");
-                        System.out.println("2. All Confirmed appointments");
+                        System.out.println("2. All appointments");
                         System.out.println("3. View Confirmed appointments"); //
                         System.out.println("4. Cancel appointment"); // not completed appointments
                         System.out.println("0. Back ");
