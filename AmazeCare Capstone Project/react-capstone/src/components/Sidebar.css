@@ -1,0 +1,30 @@
+.patient-sidebar{
+    width:260px;
+    min-height:calc(100vh - 56px);
+    background:#082c63;
+}
+
+
+
+.patient-sidebar .nav-link{
+    color:white;
+    padding:12px 15px;
+    border-radius:10px;
+    margin-bottom:8px;
+    font-weight:500;
+}
+
+.patient-sidebar .nav-link:hover{
+    background:#0d5bd7;
+    color:white;
+}
+
+.patient-sidebar .active-link{
+    background:#0d5bd7;
+    color:white;
+}
+
+.dashboard-content{
+    background:#f5f7fb;
+    min-height:calc(100vh - 56px);
+}

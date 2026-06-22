@@ -1,0 +1,19 @@
+.user-navbar{
+    background-color:#082c63;
+}
+
+.user-navbar .navbar-brand,
+.user-navbar .navbar-text{
+    color:white !important;
+}
+
+.user-navbar .btn-logout{
+    background:white;
+    color:#0d5bd7;
+    border:none;
+    font-weight:600;
+}
+
+.user-navbar .btn-logout:hover{
+    background:#f3f3f3;
+}

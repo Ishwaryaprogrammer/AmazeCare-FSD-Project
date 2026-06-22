@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { listReducer } from "./store/reducer/listReducer";
+import { reportReducer } from "./store/reducer/reportReducer";
 
 export const store = configureStore({
   reducer: {
-    characters: listReducer,
+    reports: reportReducer,
     
   }
 })

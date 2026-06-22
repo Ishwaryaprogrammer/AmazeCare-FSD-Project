@@ -10,7 +10,7 @@ export const listReducer = (state = initialState, action) => {
             ...state,
             list: action.payload.results,
             totalPages: action.payload.info.pages,
-        totalElements: action.payload.info.count
+            totalElements: action.payload.info.count
         }
     }
     return state

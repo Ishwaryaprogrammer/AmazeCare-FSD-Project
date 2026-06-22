@@ -1,4 +1,3 @@
-
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { getAll } from "../store/action/listAction";
@@ -6,7 +5,7 @@ import { getAll } from "../store/action/listAction";
 const Task = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const dispatch = useDispatch()
-    const { list, totalPages, totalElements } = useSelector(state => state.lists);
+    const { list, totalPages, totalElements } = useSelector(state => state.characters);
 
 
     console.log(list)
@@ -61,8 +60,6 @@ const Task = () => {
 
 
             <div className="d-flex justify-content-between align-items-center gap-3">
-
-
                 <div className="d-flex align-items-center gap-1">
                     <button
                         className="btn btn-primary" disabled={currentPage === 1} onClick={() => { setCurrentPage(currentPage - 1) }}
@@ -70,16 +67,50 @@ const Task = () => {
                         <i className="bi bi-chevron-left"></i> <span className="ms-1">Previous</span>
                     </button>
 
+                    {/* {
+                        arry.map(
+                            (_, index) =>(
+                                <button
+                                    key={index} onClick={() => { setCurrentPage(index + 1) }}
+                                >
+                                    {index + 1}
+                                </button>
+                            )
+                        )} */}
+
+
+
                     {
-                        arry.map((_, index) => (
+                        arry.map(
+                            (_, index) => {
+                                //index from 0 to 19      and      currentpage from 1 to 20
+                                if(index<20 && currentPage<21){
+                                    return (
+                                <button
+                                    key={index} onClick={() => { setCurrentPage(1+index) }}
+                                >
+                                    {1+index}
+                                </button>)
 
 
-                            <button
-                                key={index} onClick={() => { setCurrentPage(index + 1) }}
-                            >
-                                {index + 1}
-                            </button>
-                        ))}
+                                //index from 20 to last      and    currentpage from 21 to last
+                                 }else if(index>=20 && currentPage>=21) {
+
+                                    return (
+                                <button
+                                    key={index} onClick={() => { setCurrentPage(1+index) }}
+                                >
+                                    {1+index}
+                                </button>
+                            )
+
+                                 }
+                            
+                        }
+                        )}
+
+                    
+
 
                     <button
                         className="btn btn-primary" disabled={currentPage === (totalPages)}
@@ -94,7 +125,6 @@ const Task = () => {
             </div>
             <div className="d-flex">
                 <span className="text-primary">
-
 
                     Page {currentPage} of {totalPages}
                 </span>
